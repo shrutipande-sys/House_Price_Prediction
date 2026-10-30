@@ -1,53 +1,61 @@
-#  House Price Prediction using Machine Learning
+# House Price Prediction Using Machine Learning
 
-##  Project Overview
+## Project Overview
+This project predicts house sale prices using Machine Learning techniques. The project uses the House Prices - Advanced Regression Techniques dataset from Kaggle.
 
-This project predicts house prices using Machine Learning techniques. The objective is to build a regression model that accurately estimates house prices based on different property features.
+## Competition Details
+- **Platform:** Kaggle
+- **Competition:** House Prices - Advanced Regression Techniques
+- **Competition Link:** https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques
+- **Submission Status:** Successfully submitted
+- **Kaggle Score:** 0.14412
 
-##  Dataset
+## Dataset
+The dataset contains information about residential properties.
 
-- Dataset: House Prices - Advanced Regression Techniques
-- Source: Kaggle
-- Total Records: 1460
-- Features: 81
-- Target Variable: SalePrice
+- Training data: 1,460 rows and 81 columns
+- Testing data: 1,459 rows and 80 columns
+- Target variable: SalePrice
 
-##  Technologies Used
-
+## Technologies Used
 - Python
 - Pandas
 - NumPy
-- Matplotlib
-- Seaborn
 - Scikit-learn
 - Jupyter Notebook
+- Kaggle
 
-## Machine Learning Models
+## Methodology
+1. Load training and testing datasets.
+2. Separate input features and target variable.
+3. Handle missing numerical values using median imputation.
+4. Handle missing categorical values using most-frequent imputation.
+5. Apply One-Hot Encoding to categorical variables.
+6. Train a Random Forest Regression model.
+7. Predict house prices for the test dataset.
+8. Generate the submission CSV file.
+9. Submit predictions to the Kaggle competition.
 
-- Linear Regression
-- Decision Tree Regressor
-- Random Forest Regressor
+## Model Used
+**Random Forest Regression**
 
-##  Model Performance
+The model uses 500 decision trees and a random state of 42.
 
-| Model | MAE | RMSE | R² Score |
-|------|---------:|---------:|---------:|
-| Linear Regression | 20466.39 | 52349.37 | 0.6427 |
-| Decision Tree Regressor | 27946.90 | 44212.40 | 0.7452 |
-| Random Forest Regressor | 18252.84 | 30104.44 | 0.8818 |
+## Competition Result
+- Submission file: `submission_kaggle.csv`
+- Submission status: Successful
+- Kaggle score: **0.14412**
+- Evaluation metric: Root Mean Squared Logarithmic Error (RMSLE)
 
-## Best Model
+A lower RMSLE score indicates better prediction performance.
 
-Random Forest Regressor achieved the best performance with:
-
-- MAE: 18,252.84
-- RMSE: 30,104.44
-- R² Score: 0.8818
+## Project Files
+- `House_Price_Prediction_Kaggle.ipynb` – Python notebook containing the competition implementation.
+- `submission_kaggle.csv` – Predicted house prices submitted to Kaggle.
+- `House_Price_Prediction(ML).ipynb` – Original project notebook.
 
 ## Conclusion
+This project provided practical experience in data preprocessing, feature encoding, Random Forest Regression, prediction, and Kaggle competition submission. The model successfully generated predictions and achieved a Kaggle score of 0.14412.
 
-This project demonstrates an end-to-end machine learning workflow for predicting house prices. Random Forest Regressor was selected as the best model because it achieved the highest prediction accuracy among all the evaluated models.
-
-##  Author
-
+## Author
 Shruti Pande
